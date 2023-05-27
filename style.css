@@ -16,10 +16,11 @@ body{
 }
 
 header {
+    position:relative;
+    justify-content: stretch;
     background: #274060;;
     color: whitesmoke;
     border: 15px;
-    align-items: flex-start;
     box-sizing: border-box;
     padding: .5em 1em;
     border-radius: 5px;
@@ -27,8 +28,14 @@ header {
 }
 
 header h1{
+    padding: 0em .5em;
+    color:aqua;
+    position: absolute;
+    top: 0;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    font-size: 4em;
+    text-shadow: 4px 4px 5px black;
 }
 
 header nav{
@@ -50,6 +57,27 @@ header nav{
     border-radius: 20px;
 }
 
+#textfill{
+    height: 40vh;
+    background: #dbfcffff;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+#filltext{
+    background: #28afb0ff;
+    box-sizing: border-box;
+    justify-self:auto;
+}
+
 body footer{
-    grid-column-end: auto;
+    margin-top: auto;
+}
+
+iframe{
+    border-radius: 8px;
+    display: flex;
+    width: 95vw;
 }
