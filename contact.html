@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="portfolio" href="portfolio.html">
+    <link rel="about" href="about.html">
+    <link rel="script" href="javascript.js">
+</head>
+
+<body>
+
+    <header>
+        <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
+        <span>
+            <h1>Taite McGrady</h1>
+        </span>
+        <nav class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section id="textfill">
+        <h2>Contact Me!</h2>
+        <!-- Form section: not using 'action' because redirect will be handled by the js script included in the submission code tab -->
+        <form class="ContactForm">
+            <label for="name">
+                <h3>Name </h3><h6>First and last</h6>
+                <p>Required</p>
+            </label>
+            <input type="text" id="name" name="name" required="required">
+            <label for="org">
+                <h3>Organization</h3><h6>If query is career related</h6>
+                <p>Not required</p>
+            </label>
+            <input type="text" id="org" name="org">
+            <label for="email">
+                <h3>Email</h3><h6>Let's keep in contact!</h6>
+                <p>Required</p>
+            </label>
+            <input type="email" id="email" name="email" required>
+            <label for="msg">
+                <h3>Message</h3><h6>You can write a message here</h6>
+                <p>Not required</p>
+            </label>
+            <textarea name="msg" id="msg" cols="30" rows="10" style="resize: none;"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+    </section>
+    <footer class="links">
+        <a href="https://github.com/taiteb/">GitHub</a>
+    </footer>
+</body>
+
+</html>
