@@ -9,8 +9,8 @@ let lineSet = [];
 let linesLength;
 
 function setup() {
-  let box = document.querySelector('header');
-  let width = box.offsetWidth;
+  let box = document.querySelector('#p5');
+  let width = box.clientWidth;
   let height = box.offsetHeight;
   let myCanvas = createCanvas(width, 125);
   myCanvas.parent("p5");
@@ -27,7 +27,7 @@ function setup() {
   currentColor = targetColor;
 
   // Filling array with objects (linesLength must be defined here rather than before setup because windowWidth is a p5 library function)
-  linesLength = windowWidth;
+  linesLength = width;
   for (let i = 0; i < linesLength; i += 14) {
     lineSet.push(new straightLine(i, windowHeight, i, 0, 13, i));
   }
@@ -57,6 +57,18 @@ function draw() {
       colors[i][1] = random(90, 255);
       colors[i][2] = random(100, 255);
     }
+  }
+}
+
+function windowResized() {
+  let box = document.querySelector('#p5');
+  let width = box.clientWidth;
+  let myCanvas = createCanvas(width, 125);
+  myCanvas.parent("p5");
+
+  linesLength = width;
+  for (let i = 0; i < linesLength; i += 14) {
+    lineSet.push(new straightLine(i, windowHeight, i, 0, 13, i));
   }
 }
 
