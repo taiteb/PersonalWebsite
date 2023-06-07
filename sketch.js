@@ -26,7 +26,7 @@ function setup() {
     colors[colorIndex][1], colors[colorIndex][2]);
   currentColor = targetColor;
 
-  // Filling array with objects (linesLength must be defined here rather than before setup because windowWidth is a p5 library function)
+  // Filling array with objects 
   linesLength = width;
   for (let i = 0; i < linesLength; i += 14) {
     lineSet.push(new straightLine(i, windowHeight, i, 0, 13, i));
@@ -94,6 +94,8 @@ class straightLine {
     line(this.x1, this.y1, this.x2, this.y2);
   }
 
+  // this is what allows each line to be a separate color. the set palette is randomly reset every 150 frames, but within that, every 25 frames each line shifts to the next color from the set
+  // cI (color index) is passed in on creation from the same i integer. from there, each line shifts to the next color sequentially
   colorUpdate() {
     this.objectCurrent = lerpColor(this.objectCurrent, this.objectTarget, 0.009);
     if (frameCount % 25 === 0) {

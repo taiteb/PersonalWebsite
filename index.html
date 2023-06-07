@@ -30,13 +30,17 @@
     </header>
     <section id="textfill">
         <h2>A person who can code good and stuff</h2>
-        <p id="filltext"> Words words words words words words words words words words words words words words words
-            words
-            words words words words words words words words words words words words words words words words words
+        <p id="filltext"> Here's just a starting splash of the first big p5 project I did. As I add more personal projects like this to my GitHub, I'm going to host them on sites there and embed here with iframe like I'm doing with the examples below. (They generate the palettes randomly, so at least each one is different.) I ended up choosing to go a different route on the header, since that was used on each page, and is in a dynamic element. I had issues with resizing the window causing blank spots/overfill to appear, as the header redrew itself over more or less screen and the canvas element did not. I added a local-run p5 script, loaded a web-hosted version of the p5 library in the head so it could be viewed without having to locally download any libraries, and grabbed the parent element's width to set the canvas to. I also set a secondary loop using a trigger from the p5 library that runs when it detects the page has been resized, which then redraws the canvas at that size. Unfortunately it resets the whole drawing, but the whole thing is kind of ambient and mellow in the first place so it doesn't come off as jarring as interrupting an animation. When I initially had the demos below set as my header, it felt much too chaotic even changing page to page- everything would reset, and it was very noticable/distracting. The current header is just kind of a dumbed down version of the color shift properties I developed for the trail program, which I'm pretty proud of figuring out on my own. It just adds a nice subtle shimmer to a page that could otherwise be flat and static.
         </p>
         <div id="interactive">
             <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
+            <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
+            <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
+            <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
+            <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
+            <iframe src="https://taiteb.github.io/Working-with-Agents/"></iframe>
         </div>
+        <p id="filltext">Bonus tip: you can click on a content box to spawn more trails!</p>
     </section>
     <footer class="links">
         <a href="https://github.com/taiteb/">GitHub</a>

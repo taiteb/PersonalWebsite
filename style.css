@@ -63,18 +63,17 @@ header nav{
     margin-top: 200px;
     height: fit-content;
     /* background: #dbfcffff; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     justify-content: 1;
     flex: 1;
     padding-top: 15px;
-    padding-left: 35px;
-
+    padding-left: 5px;
+    margin-bottom: 50px;
 }
 
 #textfill h2{
     text-transform: capitalize;
-    font-size: 2em;
+    font: bold 2em lucida,monospace;
     border: 4px solid;
     border-radius: 20px;
     padding: 8px;
@@ -87,6 +86,7 @@ header nav{
 	border-style: outset;
 	border-color: #0066A2;
     width: fit-content;
+    transition: all 0.2s ease-in-out;
 }
 
 #filltext{
@@ -103,6 +103,8 @@ header nav{
     height: fit-content;
     background-color: #4b79a1;
     color: #dbfcff ;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: all 0.2s ease-in-out;
 }
 
 body footer{
@@ -139,6 +141,7 @@ header #p5{
     background-color: #4b79a1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    color: white;
 }
 
 .ContactForm div{
@@ -186,6 +189,21 @@ header #p5{
     transition: all 0.2s ease-in-out;
 }
 
+.ContactForm h4{
+    font-style: oblique;
+    display: grid;
+    align-self: center;
+}
+
+.ContactForm p{
+    opacity: 0.7;
+    text-transform: lowercase;
+    font-style: oblique;
+    font-family: Helvetica, monospace;
+    font-size: small;
+    transition: all 0.2s ease-in-out;
+}
+
 label h3{
     width: fit-content;
     border: 4px solid;
@@ -199,10 +217,54 @@ label h3{
     background: #0066A2;
 	border-style: outset;
 	border-color: #0066A2;
-	font: bold 15px arial,sans-serif;
+	font: bold 1.4em lucida,monospace;
+    transition: all 0.2s ease-in-out;
 }
 
 a:hover, #submit:hover{
     opacity: 1;
     transform: scale(1.03);
+}
+
+#textfill h2:hover, label h3:hover, #submit:hover, #filltext:hover, .ContactForm input:hover, .ContactForm textarea:hover{
+    border-style: solid;
+    border-color: #023f63;
+}
+
+.ContactForm p:hover{
+    opacity: .8;
+    transform: scale(1.04);
+}
+
+#interactive{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#interactive iframe{
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
+    width: 95%;
+    border: 5px outset #0066A2;
+    margin-bottom: 30px;
+    background-color: #4b79a1;
+    color: #dbfcff ;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px){
+    .ContactForm{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px){
+    .ContactForm{
+        grid-template-columns: 1fr;
+    }
 }
