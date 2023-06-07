@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="portfolio" href="portfolio.html">
+    <link rel="about" href="about.html">
+    <link rel="script" href="javascript.js">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+</head>
+
+<body>
+    <header>
+        <script src="sketch.js"></script>
+        <div id="p5"></div>
+        <span>
+            <h1>Taite McGrady</h1>
+        </span>
+        <nav class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section id="textfill">
+        <h2>Contact Me!</h2>
+        <form class="ContactForm" action="thanks.html">
+            <div id="name">
+                <label for="name">
+                    <h3>Name </h3>
+                    <h6>First and last</h6>
+                    <p>Required</p>
+                </label>
+                <input type="text" id="name" name="name" required="required">
+            </div>
+            <div id="org">
+                <label for="org">
+                    <h3>Organization</h3>
+                    <h6>If query is career related</h6>
+                    Not required
+                </label>
+                <input type="text" id="org" name="org">
+            </div>
+            <div id="email">
+                <label for="email">
+                    <h3>Email</h3>
+                    <h6>Let's keep in contact!</h6>
+                    Required
+                </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div id="msg">
+                <label for="msg">
+                    <h3>Message</h3>
+                    <h6>You can write a message here</h6>
+                    Not required
+                </label>
+                <textarea name="msg" id="msg" cols="20" rows="5" style="resize: none;"></textarea>
+            </div>
+            <br>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </section>
+    <footer class="links">
+        <a href="https://github.com/taiteb/">GitHub</a>
+    </footer>
+</body>
+
+</html>

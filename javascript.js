@@ -1,6 +1,20 @@
-console.log("Hello, FullStack Academy");
-console.log("While you're here, I'll explain the header");
-console.log("It's an iframe embed of a p5 sketch I wrote");
-console.log("Detailed notes are in the github repo the Page is hosting from");
-console.log("But basically I pieced it together from a couple different souces");
-console.log("P.S. you can click on the header to spawn more of the traces");
+const form = document.querySelector("#form")
+   const submitButton = document.querySelector("#submit")
+   const scriptURL = 'https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec'
+
+   form.addEventListener('submit', e => {
+     submitButton.disabled = true
+     e.preventDefault()
+     let requestBody = new FormData(form)
+     fetch(scriptURL, { method: 'POST', body: requestBody})
+       .then(response => {
+          alert('Success!', response)
+          submitButton.disabled = false
+         })
+       .catch(error => {
+       alert('Error!', error.message)
+         submitButton.disabled = false
+
+       }
+       )
+   })
