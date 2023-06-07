@@ -7,19 +7,23 @@ html{
 
 body{
     display: grid;
-    justify-content: center;
+    width: 95%;
+    justify-content: stretch;
     background: 28afb0ff;
     font-size: 17px;
+    border: 5px;
 }
 
 header {
     position:relative;
-    justify-content:space-around;
+    /* justify-content:space-around; */
     background: #274060;;
     color: whitesmoke;
     /* border: 15px; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: .5em 1em;
+    display: grid;
+    justify-content: stretch;
     border-radius: 10px;
     font-family: sans-serif;
 }
@@ -30,10 +34,10 @@ header h1{
     position: absolute;
     top: 0;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     font-size: 4em;
-    text-shadow: 4px 4px 5px black;
-
+    text-shadow: 4px 4px 5px rgb(79, 76, 76);
+    opacity: 0.75;
 }
 
 header nav{
@@ -56,23 +60,48 @@ header nav{
 }
 
 #textfill{
-    padding: .5em;
     height: fit-content;
-    background: #dbfcffff;
+    /* background: #dbfcffff; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-content: 1;
     flex: 1;
+    padding-top: 15px;
+    padding-left: 35px;
+
 }
 
 #textfill h2{
     text-transform: capitalize;
     font-size: 2em;
+    border: 4px solid;
+    border-radius: 20px;
+    padding: 8px;
+    padding-bottom: 5px;
+    margin: 5px;
+    vertical-align: center;
+    text-align: center;
+    color: #dbfcff ;
+    background: #0066A2;
+	border-style: outset;
+	border-color: #0066A2;
+    width: fit-content;
 }
 
 #filltext{
-    background: #28afb0ff;
+    /* background: #28afb0ff; */
     box-sizing: border-box;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    border-radius: 20px;
+    border: 5px outset #0066A2;
+    margin-bottom: 30px;
+    width: 90vw;
+    height: fit-content;
+    background-color: #4b79a1;
+    color: #dbfcff ;
 }
 
 body footer{
@@ -87,25 +116,79 @@ body footer{
 
 }
 
-iframe{
-    border-radius: 8px;
-    border: #dbfcff;
-    display: flex;
-    width: 98vw;
+header #p5{
+    border-radius: 10px;
+    border: 8px outset #0066A2;
+
 }
 
-.ContactForm form input{
-    display: inline-block;
+.ContactForm {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    border-radius: 20px;
+    border: 5px outset #0066A2;
+    margin-bottom: 30px;
+    width: 90vw;
+    height: fit-content;
+    background-color: #4b79a1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ContactForm div{
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: medium;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 150px;
+}
+
+.ContactForm input{
+    height: 30px;
+    align-self: left;
+    border-radius: 10px;
+    border: 5px outset #0066A2;
+}
+
+.ContactForm textarea {
+    border-radius: 10px;
+    border: 5px outset #0066A2;
+}
+
+.ContactForm #submit{
+    border: 4px solid;
+    border-radius: 20px;
+    padding: 8px;
+    padding-bottom: 5px;
+    margin: 5px;
+    vertical-align: center;
+    text-align: center;
+    color: #dbfcff ;
+    background: #0066A2;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 150px;
+	width: 100px;
+	font: bold 15px arial,sans-serif;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 label h3{
     width: fit-content;
-    border: 4px solid #afb0ff ;
+    border: 4px solid;
     border-radius: 20px;
-    padding: 8px;
+    padding: 10px;
     background: rgb(20, 34, 52);
     margin: 5px;
     vertical-align: top;
     text-align: center;
     color: #dbfcff ;
+    background: #0066A2;
+	border-style: outset;
+	border-color: #0066A2;
+	font: bold 15px arial,sans-serif;
 }
