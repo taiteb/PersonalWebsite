@@ -261,10 +261,15 @@ a:hover, #submit:hover{
     .ContactForm{
         grid-template-columns: 1fr 1fr;
     }
+    header h1{
+        font-size: 8vw;
+    }
 }
 
 @media (max-width: 480px){
     .ContactForm{
         grid-template-columns: 1fr;
     }
+
+    
 }
