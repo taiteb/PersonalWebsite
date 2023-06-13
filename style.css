@@ -238,7 +238,7 @@ a:hover, #submit:hover{
 
 #interactive{
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 #interactive iframe{
@@ -261,10 +261,22 @@ a:hover, #submit:hover{
     .ContactForm{
         grid-template-columns: 1fr 1fr;
     }
+    header h1{
+        font-size: 8vw;
+    }
+
+    #interactive{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 480px){
     .ContactForm{
         grid-template-columns: 1fr;
     }
+
+    #interactive{
+        grid-template-columns: 1fr;
+    }
+    
 }
